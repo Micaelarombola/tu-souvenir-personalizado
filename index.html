@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#c86d85">
+  <meta name="description" content="Remeras, buzos, pantalones, tazas y regalos personalizados. Tus ideas, hechas realidad.">
+
+  <title>Tu Souvenir Personalizado | Tienda Online</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+
+  <!-- BARRA SUPERIOR -->
+  <div class="topline">
+    <a href="https://www.instagram.com/tusouvenirpersonalizado/" target="_blank" rel="noopener noreferrer">
+      ♡ Seguinos en Instagram
+    </a>
+    <span>Tus ideas, hechas realidad ♡</span>
+  </div>
+
+  <!-- ENCABEZADO -->
+  <header class="main-header">
+
+    <form id="searchForm" class="search" role="search">
+      <input id="search" type="search" placeholder="¿Qué estás buscando?" aria-label="Buscar productos">
+      <button type="submit" aria-label="Buscar">⌕</button>
+    </form>
+
+    <a href="#inicio" class="brand">
+      <img src="img/logo.jfif" alt="Tu Souvenir Personalizado" class="logo-img">
+    </a>
+
+    <div class="header-actions">
+      <button id="cartButton" type="button" aria-label="Abrir carrito">
+        🛍️
+        <span id="count">0</span>
+      </button>
+    </div>
+
+  </header>
+
+  <!-- MENÚ -->
+  <nav class="category-nav" aria-label="Categorías">
+    <a href="#inicio">INICIO</a>
+    <a href="#productos" data-nav-category="Remeras">REMERAS</a>
+    <a href="#productos" data-nav-category="Buzos">BUZOS</a>
+    <a href="#productos" data-nav-category="Pantalones">PANTALONES</a>
+    <a href="#productos" data-nav-category="Tazas">TAZAS</a>
+    <a href="#productos" data-nav-category="Bolsas">BOLSAS DE FRISELINA</a>
+    <a href="#personaliza">PERSONALIZÁ</a>
+    <a href="#guia">GUÍA DE TALLES</a>
+  </nav>
+
+  <!-- BARRA ANIMADA -->
+  <div class="marquee">
+    <div class="marquee-track" aria-hidden="true">
+      <span>♡ PERSONALIZAMOS TUS MOMENTOS ✦ REGALOS ÚNICOS ✦ HECHO CON AMOR ✦ TUS IDEAS, HECHAS REALIDAD ✦</span>
+      <span>♡ PERSONALIZAMOS TUS MOMENTOS ✦ REGALOS ÚNICOS ✦ HECHO CON AMOR ✦ TUS IDEAS, HECHAS REALIDAD ✦</span>
+    </div>
+  </div>
+
+  <main id="inicio">
+
+    <!-- PORTADA CON CARRUSEL -->
+    <section class="slider" aria-label="Colecciones destacadas">
+
+      <div class="slide active" style="--photo:url('img/imagen10.png')">
+        <div class="slide-content">
+          <span>BIENVENIDOS A NUESTRA TIENDA</span>
+          <h1>Tus ideas,<br>hechas realidad.</h1>
+          <p>Elegí tu prenda favorita y personalizala con el diseño que más te guste.</p>
+          <a href="#productos" class="btn-primary">DESCUBRÍ LA COLECCIÓN</a>
+        </div>
+      </div>
+
+      <div class="slide" style="--photo:url('img/imagen 3.png')">
+        <div class="slide-content">
+          <span>INDUMENTARIA PERSONALIZADA</span>
+          <h2>Tu estilo,<br>tu diseño.</h2>
+          <p>Remeras y puperas con estampas elegidas especialmente por vos.</p>
+          <a href="#productos" class="btn-primary" data-nav-category="Remeras">ELEGÍ TU REMERA</a>
+        </div>
+      </div>
+
+      <div class="slide" style="--photo:url('img/imagen6.png')">
+        <div class="slide-content">
+          <span>CREACIONES ÚNICAS</span>
+          <h2>Vestí lo que<br>más te gusta.</h2>
+          <p>Diseños personalizados para expresar tu personalidad.</p>
+          <a href="#productos" class="btn-primary">VER PRODUCTOS</a>
+        </div>
+      </div>
+
+      <button id="prevSlide" class="slider-arrow prev" type="button" aria-label="Anterior">‹</button>
+      <button id="nextSlide" class="slider-arrow next" type="button" aria-label="Siguiente">›</button>
+      <div id="sliderDots" class="dots"></div>
+
+    </section>
+
+    <!-- BENEFICIOS -->
+    <section class="benefits">
+      <div class="benefit">
+        <span>👕</span>
+        <h3>Elegí tu prenda</h3>
+        <p>Seleccioná el modelo, color y talle que más te guste.</p>
+      </div>
+
+      <div class="benefit">
+        <span>🎨</span>
+        <h3>Elegí tu estampa</h3>
+        <p>Elegí un diseño del catálogo o compartinos tu propia idea.</p>
+      </div>
+
+      <div class="benefit">
+        <span>♡</span>
+        <h3>Creado para vos</h3>
+        <p>Personalizamos cada producto con dedicación y amor.</p>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="categories-section">
+      <div class="section-heading">
+        <span>ENCONTRÁ LO QUE BUSCÁS</span>
+        <h2>Nuestras categorías</h2>
+        <p>Descubrí todas las opciones que podés personalizar.</p>
+      </div>
+
+      <div class="category-grid">
+        <a href="#productos" class="category-card" data-category-link="Remeras">
+          <span>👕</span><h3>Remeras</h3><p>Ver colección →</p>
+        </a>
+        <a href="#productos" class="category-card" data-category-link="Buzos">
+          <span>🧥</span><h3>Buzos</h3><p>Ver colección →</p>
+        </a>
+        <a href="#productos" class="category-card" data-category-link="Pantalones">
+          <span>👖</span><h3>Pantalones</h3><p>Ver colección →</p>
+        </a>
+        <a href="#productos" class="category-card" data-category-link="Tazas">
+          <span>☕</span><h3>Tazas</h3><p>Ver colección →</p>
+        </a>
+        <a href="#productos" class="category-card" data-category-link="Bolsas">
+          <span>🛍️</span><h3>Bolsas de friselina</h3><p>Ver colección →</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section id="productos" class="catalog">
+      <div class="section-heading">
+        <span>DESCUBRÍ NUESTRA COLECCIÓN</span>
+        <h2>Elegí tu producto</h2>
+        <p>Encontrá tu favorito y personalizalo a tu manera.</p>
+      </div>
+
+      <div id="filters" class="filters"></div>
+      <div id="products" class="products"></div>
+    </section>
+
+    <!-- PERSONALIZACIÓN -->
+    <section id="personaliza" class="personalization">
+      <div class="personalization-content">
+        <span>CREADO ESPECIALMENTE PARA VOS</span>
+        <h2>¿Tenés una idea?<br>¡Hagámosla realidad!</h2>
+        <p>Elegí tu prenda, seleccioná dónde querés la estampa y contanos qué diseño te gustaría.</p>
+        <p>Podés elegir entre nuestros diseños o crear algo completamente personalizado.</p>
+        <a href="#productos" class="btn-primary">ELEGIR PRODUCTO</a>
+      </div>
+    </section>
+
+    <!-- GUÍA DE TALLES -->
+    <section id="guia" class="size-guide">
+      <div class="section-heading">
+        <span>ENCONTRÁ TU MEDIDA</span>
+        <h2>Guía de talles y estampas</h2>
+        <p>Consultá las medidas antes de elegir tu prenda.</p>
+      </div>
+
+      <div class="guide-grid">
+        <img src="img/talles.jfif" alt="Tabla de talles" loading="lazy">
+        <img src="img/impresion.jfif" alt="Medidas de estampas" loading="lazy">
+      </div>
+    </section>
+
+    <!-- NOSOTROS -->
+    <section id="nosotros" class="about">
+      <span>CONOCENOS</span>
+      <h2>Tu Souvenir Personalizado</h2>
+      <p>Creemos que cada idea merece convertirse en algo especial.</p>
+      <p>Creamos productos personalizados para expresar tu estilo, regalar algo único y llevar tus diseños favoritos a donde vayas.</p>
+      <a href="https://www.instagram.com/tusouvenirpersonalizado/" target="_blank" rel="noopener noreferrer">
+        SEGUINOS EN INSTAGRAM
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <h3>Tu Souvenir Personalizado</h3>
+        <p>Tus ideas, hechas realidad ♡</p>
+      </div>
+
+      <div>
+        <h4>Tienda</h4>
+        <a href="#productos">Productos</a>
+        <a href="#personaliza">Personalización</a>
+        <a href="#guia">Guía de talles</a>
+      </div>
+
+      <div>
+        <h4>Seguinos</h4>
+        <a href="https://www.instagram.com/tusouvenirpersonalizado/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © <span id="year"></span> Tu Souvenir Personalizado
+    </div>
+  </footer>
+
+  <!-- FICHA DEL PRODUCTO -->
+  <dialog id="productDialog" class="product-dialog">
+    <button id="closeProduct" class="modal-close" type="button" aria-label="Cerrar producto">✕</button>
+    <div id="productDetail"></div>
+  </dialog>
+
+  <!-- CARRITO -->
+  <dialog id="cartDialog" class="cart-dialog">
+    <div class="dialog-head">
+      <h2>Tu carrito ♡</h2>
+      <button id="closeCart" type="button" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-summary">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="total">$0</strong>
+      </div>
+      <p class="note">Precios sujetos a confirmación. El envío se coordina por WhatsApp y no está incluido en el total.</p>
+      <button id="checkoutButton" class="checkout-btn" type="button">
+        Finalizar pedido por WhatsApp
+      </button>
+      <button id="clearCart" class="clear-cart" type="button">
+        Vaciar carrito
+      </button>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
